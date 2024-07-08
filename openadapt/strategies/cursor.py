@@ -174,8 +174,8 @@ def generate_action_event_with_dot(
     )
     
     buffer = io.BytesIO()
-    img.save(buffer, format="PNG")
-    img_with_dot = buffer.getvalue()
+    image.save(buffer, format="PNG")
+    image_with_dot = buffer.getvalue()
     
     prompt_with_dot = utils.render_template_from_file(
         "prompts/self_correction_with_dot.j2",
@@ -189,7 +189,7 @@ def generate_action_event_with_dot(
     content_corrected = prompt_adapter.prompt(
         prompt_with_dot,
         system_prompt,
-        [img_with_dot],
+        [image_with_dot],
     )
     action_dict_corrected = utils.parse_code_snippet(content_corrected)
     
