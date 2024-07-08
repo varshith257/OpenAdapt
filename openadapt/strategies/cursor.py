@@ -44,7 +44,7 @@ class CursorReplayStrategy(VanillaReplayStrategy):
         self,
         recording: models.Recording,
         replay_instructions: str = "",
-        process_events: bool = PROCESS_EVENTS,,
+        process_events: bool = PROCESS_EVENTS,
         dot_radius: int = 5,
         dot_color: str = "red",
     ) -> None:
