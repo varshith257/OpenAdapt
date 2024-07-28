@@ -7,6 +7,7 @@ Module: __init__.py
 from openadapt.strategies.base import BaseReplayStrategy
 
 # disabled because importing is expensive
+from openadapt.strategies.cursor import CursorReplayStrategy
 # from openadapt.strategies.demo import DemoReplayStrategy
 from openadapt.strategies.naive import NaiveReplayStrategy
 from openadapt.strategies.segment import SegmentReplayStrategy
